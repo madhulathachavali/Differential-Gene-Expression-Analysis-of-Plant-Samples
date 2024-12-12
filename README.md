@@ -129,3 +129,66 @@ pheatmap(assay(dds)[top_genes,],
          clustering_distance_cols = "euclidean")
 
 ```
+
+## Results
+
+### Summary of Differential Gene Expression Analysis
+
+After performing the differential gene expression (DEG) analysis using the **DESeq2** package, differentially expressed between the various conditions (e.g., Intact vs. Digested rice roots) is as follows:
+
+- **Total genes analyzed**: 55,991
+- **Significant genes (adjusted p-value < 0.1)**: 4,193 genes
+- **Upregulated genes**: 1,892 genes (7.5%)
+- **Downregulated genes**: 1,301 genes (5.2%)
+- **Low count genes (mean count < 10)**: 11,459 genes (45%)
+
+### Table: Condition4 vs. Condition1
+
+| Gene ID         | Base Mean | Log2 Fold Change | p-value  | Adjusted p-value (padj) |
+|-----------------|-----------|------------------|----------|------------------------|
+| LOC_Os01g01010  | 7.32      | -3.52            | 0.021    | 0.092                  |
+| LOC_Os01g01030  | 3.31      | -2.15            | 0.199    | NA                     |
+| LOC_Os01g01060  | 246.04    | 0.65             | 0.059    | 0.189                  |
+| LOC_Os01g01295  | 22.15     | 1.71             | 0.001    | 0.010                  |
+| LOC_Os01g01520  | 13.60     | -4.22            | 0.005    | 0.031                  |
+
+> **Note**: The `log2FoldChange` represents the change in gene expression between conditions. A positive value indicates upregulation, while a negative value indicates downregulation.
+
+### Significant Genes
+
+Genes with an **adjusted p-value** < 0.1 were considered statistically significant. For example:
+
+- **Upregulated genes**: LOC_Os01g01295, LOC_Os01g01520, etc.
+- **Downregulated genes**: LOC_Os01g01010, LOC_Os01g01030, etc.
+
+### Volcano Plot
+
+A **volcano plot** was generated to visualize the relationship between the **log2 fold change** and **p-value** for each gene. The plot highlights genes that are significantly upregulated or downregulated.
+
+![Volcano Plot](https://github.com/madhulathachavali/Differential-Gene-Expression-Analysis-of-Plant-Samples/blob/main/images/volcano_plot.png?raw=true)
+
+> **Thresholds used**:  
+> - **p-value threshold**: 0.05  
+> - **Log2 fold change threshold**: ±1
+
+### Heatmap of Significantly Differentially Expressed Genes
+
+A heatmap was created to visualize the expression levels of significantly differentially expressed genes across the different conditions. The heatmap provides an overview of the expression patterns, with rows representing genes and columns representing samples.
+
+![Heatmap](https://github.com/madhulathachavali/Differential-Gene-Expression-Analysis-of-Plant-Samples/blob/main/images/heatmap.png?raw=true)
+
+---
+
+- **Upregulated Genes**: Genes that are **upregulated** in one condition (e.g., Condition4) relative to the other (e.g., Condition1) indicate an increase in expression, which might be associated with biological processes specific to that condition.
+  
+- **Downregulated Genes**: Genes that are **downregulated** suggest a decrease in expression, which could reflect the suppression of certain pathways or regulatory mechanisms in the condition.
+
+- **Key Findings**:
+  - Certain genes, such as **LOC_Os01g01010** and **LOC_Os01g01520**, show significant changes in expression, potentially indicating their involvement in biological responses to the conditions analyzed (e.g., intact vs. digested rice roots).
+  - Genes like **LOC_Os01g01295** show upregulation, which may be associated with stress responses or adaptation to the experimental conditions.
+
+---
+
+## Summary of DEG Analysis
+In this analysis, we successfully identified genes with significant changes in expression between the conditions. The combination of **volcano plots** and **heatmaps** helped to visualize the differentially expressed genes, and the detailed results table provided further insight into the magnitude and significance of these changes.
+
