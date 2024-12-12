@@ -112,7 +112,8 @@ ggplot(res, aes(x = log2FoldChange, y = -log10(pvalue), color = significance)) +
   theme_minimal() +
   theme(legend.title = element_blank())
 
-![Alt text]([https://github.com/username/repository/blob/main/images/volcano_plot.png?raw=true]([https://github.com/madhulathachavali/Differential-Gene-Expression-Analysis-of-Plant-Samples/blob/main/Volcano%20plot.pdf](https://github.com/madhulathachavali/Differential-Gene-Expression-Analysis-of-Plant-Samples/blob/main/Volcano%20plot-1.png)))
+![Volcano plot-1](https://github.com/user-attachments/assets/96e637c2-4edb-4651-af0c-c7a615654fff)
+
 
 Step 2: Heatmap
 visualize gene expression patterns across samples
