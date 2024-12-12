@@ -1,7 +1,8 @@
 # Differential Gene Expression Analysis of RNA-Seq Data
-This repository contains a comprehensive **RNA-Seq differential gene expression (DEG) analysis workflow** using bulk RNA sequencing data of rice roots. The data comes from the GEO dataset **GSE283509**. This workflow guides users through the process of loading RNA-Seq data, performing differential expression analysis, and visualizing the results using the **DESeq2** R package.
 
-Dataset Information
+This repository presents an RNA-Seq differential gene expression (DEG) analysis of rice roots using bulk RNA sequencing data. It includes data processing, differential expression analysis, and visualization with the DESeq2 R package.
+
+## Dataset Information
 This analysis uses RNA sequencing data from the GEO dataset GSE283509, which includes bulk RNA-Seq data from intact and digested rice roots (Oryza sativa). The data focuses on single-cell RNA-seq protoplasting induced gene filtering.
 
 Key Details:
@@ -21,8 +22,6 @@ Reference: Zhu M, Hsu C, Lucas OP, Taylor IW, Mijar M, Nolan TM, Sadanandom A, B
 
 ## Project Overview
 
-This repository provides tools and scripts for:
-
 1. **Data Preprocessing**: Importing raw gene expression count data from text files and organizing it into a count matrix.
 2. **Metadata Preparation**: Annotating the samples with experimental conditions (e.g., Condition1, Condition2) to facilitate comparison across samples.
 3. **Differential Gene Expression (DEG) Analysis**: Using the **DESeq2** package in R to analyze gene expression data and identify differentially expressed genes (DEGs) between experimental conditions.
@@ -33,14 +32,12 @@ This repository provides tools and scripts for:
 
 ## Prerequisites
 
-To run this analysis, you will need:
-
 - **R** (version 4.0 or higher)
 - **DESeq2** package
 - **ggplot2** package for visualization
 - **pheatmap** package for heatmap generation
 
-You can install the necessary R packages using the following commands:
+install the necessary R packages using the following commands:
 
 ```r
 install.packages("DESeq2")
