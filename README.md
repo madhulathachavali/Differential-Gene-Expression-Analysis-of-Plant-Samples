@@ -1,4 +1,23 @@
 # Differential Gene Expression Analysis of RNA-Seq Data
+This repository contains a comprehensive **RNA-Seq differential gene expression (DEG) analysis workflow** using bulk RNA sequencing data of rice roots. The data comes from the GEO dataset **GSE283509**. This workflow guides users through the process of loading RNA-Seq data, performing differential expression analysis, and visualizing the results using the **DESeq2** R package.
+
+Dataset Information
+This analysis uses RNA sequencing data from the GEO dataset GSE283509, which includes bulk RNA-Seq data from intact and digested rice roots (Oryza sativa). The data focuses on single-cell RNA-seq protoplasting induced gene filtering.
+
+Key Details:
+Conditions:
+Intact rice roots: Harvested from gel-grown conditions.
+Digested rice roots: Protoplasts and undigested chunks.
+Platform: Illumina NextSeq 500
+
+RNA Extraction: Zymo MagBead RNA Isolation Kit, followed by Lexogen QuantSeq 3′ FWD RNA-Seq library preparation.
+
+Alignment: Reads aligned to MSU Rice Genome v7, counted with HTSeq-Count.
+
+Samples: 8 total samples, with replicates from each condition.
+
+Reference: Zhu M, Hsu C, Lucas OP, Taylor IW, Mijar M, Nolan TM, Sadanandom A, Bennett MJ, Benfey PN, Pandey BK
+
 
 ## Project Overview
 
