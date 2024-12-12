@@ -166,7 +166,7 @@ Genes with an **adjusted p-value** < 0.1 were considered statistically significa
 
 A **volcano plot** was generated to visualize the relationship between the **log2 fold change** and **p-value** for each gene. The plot highlights genes that are significantly upregulated or downregulated.
 
-![Volcano Plot](https://github.com/madhulathachavali/Differential-Gene-Expression-Analysis-of-Plant-Samples/blob/main/images/volcano_plot.png?raw=true)
+![Alt text]([images/volcano_plot.png](https://github.com/madhulathachavali/Differential-Gene-Expression-Analysis-of-Plant-Samples/blob/main/Volcano%20plot-1.png))
 
 > **Thresholds used**:  
 > - **p-value threshold**: 0.05  
