@@ -135,7 +135,7 @@ pheatmap(assay(dds)[top_genes,],
 
 ### Summary of Differential Gene Expression Analysis
 
-After performing the differential gene expression (DEG) analysis using the **DESeq2** package, differentially expressed between the various conditions (e.g., Intact vs. Digested rice roots) is as follows:
+Intact vs. Digested rice roots: 
 
 - **Total genes analyzed**: 55,991
 - **Significant genes (adjusted p-value < 0.1)**: 4,193 genes
