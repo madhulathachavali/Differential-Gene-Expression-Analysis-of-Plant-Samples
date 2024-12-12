@@ -112,10 +112,6 @@ ggplot(res, aes(x = log2FoldChange, y = -log10(pvalue), color = significance)) +
   theme_minimal() +
   theme(legend.title = element_blank())
 
-<img width="424" alt="image" src="https://github.com/user-attachments/assets/8a387159-9d32-495f-a596-8ff3e762c52f" />
-
-
-
 Step 2: Heatmap
 visualize gene expression patterns across samples
 ```r
