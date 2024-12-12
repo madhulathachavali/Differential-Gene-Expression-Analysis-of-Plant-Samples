@@ -43,47 +43,52 @@ install the necessary R packages using the following commands:
 install.packages("DESeq2")
 install.packages("ggplot2")
 install.packages("pheatmap")
-
+```
 ## Differential Gene Expression Analysis 
 
 Differential Gene Expression analysis is used to identify genes whose expression levels significantly differ between experimental conditions.
 
 Step 1: Data Preparation
-Before performing DEG analysis, RNA-Seq data is loaded into the count matrix and metadata. The metadata describes each sample's experimental conditions (e.g., Condition1, Condition2, etc.).
+Before performing DEG analysis, RNA-Seq data is loaded into the count matrix and metadata. The metadata describes each sample's experimental conditions (e.g., Condition1, Condition2, etc.)
 
-# Define experimental conditions for each sample
+```r
+
+Step 1: Data Preparation
+
 col_data <- data.frame(
   condition = factor(c("Condition1", "Condition1", "Condition2", "Condition2", 
                        "Condition3", "Condition3", "Condition4", "Condition4")),
   row.names = colnames(count_matrix)  # Sample names from the count matrix
 )
-
+```
 Step 2: Create DESeq2 Dataset
 With the count matrix and metadata, the DESeqDataSet object is created, which is required by DESeq2 for analysis.
-
+```r
 # Create DESeq2 dataset from count matrix and metadata
+
 dds <- DESeqDataSetFromMatrix(countData = count_matrix, 
                               colData = col_data, 
                               design = ~condition)
+```
 Step 3: Run DESeq2 Analysis
-
+```r
 # Run the DESeq2 differential expression analysis
 dds <- DESeq(dds)
-
+```
 Step 4: Results
-
+```r
 # Extract results from DESeq2 analysis
 res <- results(dds)
 
 # View summary of results
 summary(res)
-
+```
 ## Visualization
 
 Step 1: Volcano Plot
 
 A volcano plot defines the relationship between the log2 fold change (x-axis) and the -log10 p-value (y-axis) and it shows significantly upregulated or downregulated genes.
-
+```r
 library(ggplot2)
 
 # Set thresholds for p-value and log2 fold change
@@ -96,6 +101,7 @@ res$significance[which(res$pvalue < pval_threshold & res$log2FoldChange > lfc_th
 res$significance[which(res$pvalue < pval_threshold & res$log2FoldChange < -lfc_threshold)] <- "Downregulated"
 
 # Generate volcano plot
+
 ggplot(res, aes(x = log2FoldChange, y = -log10(pvalue), color = significance)) +
   geom_point(alpha = 0.6) +
   scale_color_manual(values = c("Not Significant" = "gray", "Upregulated" = "red", "Downregulated" = "blue")) +
@@ -106,9 +112,10 @@ ggplot(res, aes(x = log2FoldChange, y = -log10(pvalue), color = significance)) +
   theme_minimal() +
   theme(legend.title = element_blank())
 
+
 Step 2: Heatmap
 visualize gene expression patterns across samples
-
+```r
 library(pheatmap)
 
 # Select the top significant genes (padj < 0.1)
@@ -120,3 +127,4 @@ pheatmap(assay(dds)[top_genes,],
          clustering_distance_rows = "euclidean", 
          clustering_distance_cols = "euclidean")
 
+```
