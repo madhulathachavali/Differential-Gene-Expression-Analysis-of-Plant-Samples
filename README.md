@@ -180,10 +180,6 @@ A heatmap was created to visualize the expression levels of significantly differ
 
 ---
 
-- **Upregulated Genes**: Genes that are **upregulated** in one condition (e.g., Condition4) relative to the other (e.g., Condition1) indicate an increase in expression, which might be associated with biological processes specific to that condition.
-  
-- **Downregulated Genes**: Genes that are **downregulated** suggest a decrease in expression, which could reflect the suppression of certain pathways or regulatory mechanisms in the condition.
-
 - **Key Findings**:
   - Certain genes, such as **LOC_Os01g01010** and **LOC_Os01g01520**, show significant changes in expression, potentially indicating their involvement in biological responses to the conditions analyzed (e.g., intact vs. digested rice roots).
   - Genes like **LOC_Os01g01295** show upregulation, which may be associated with stress responses or adaptation to the experimental conditions.
